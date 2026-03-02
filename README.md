@@ -35,6 +35,16 @@ Below is the complete list of the files included in this repository and their sp
 * **`smc_controller.slx`**: Sliding Mode Controller (SMC) model utilizing the hyperbolic tangent (`tanh`) boundary layer in nominal conditions.
 * **`smc_ceilground.slx`**: SMC model evaluated in the severely perturbed scenario, demonstrating instantaneous robust switching against unmodeled dynamics.
 
+### Visualization Utilities (LaTeX Formatting)
+These helper functions are called by `autoplot.m` to export publication-quality vector graphics with LaTeX interpreters and dynamic axis padding:
+* **`latex_plot.m`**: Generates a standard single plot (e.g., for Total Thrust).
+* **`latex_subplot_plot.m`**: Generates two stacked subplots.
+* **`latex_triple_subplot_plot.m`**: Generates three stacked subplots (e.g., for 3-axis control torques).
+* **`latex_dual_column_plot.m`**: Generates a 3x2 grid layout (e.g., reference vs. actual position on the left, tracking errors on the right).
+
+### 3D Assets
+* **`quadrotor.stl`**: A 3D CAD mesh file representing the UAV. It is imported by the `video.m` script to render the realistic 3D flight animation.
+
 ## Usage Instructions
 
 ### 1. Prerequisites
@@ -42,8 +52,8 @@ Below is the complete list of the files included in this repository and their sp
 * **Required Toolboxes:** Ensure you have the standard Simulink toolbox installed. No external hardware is required; the project is entirely simulation-based.
 
 ### 2. Initialization (Setup)
-1) Run setup_mission.m to load the UAV parameters and trajectory data into the workspace.
-2) Open the desired .slx file based on the control strategy and scenario you want to test.
+1) Run `setup_mission.m` to load the UAV parameters and trajectory data into the workspace.
+2) Open the desired `.slx` file based on the control strategy and scenario you want to test.
 3) Wait for the simulation to finish.
 
-Note on Automation: The autoplot.m script is explicitly configured within the StopFcn callback in the Model Properties of each Simulink file. This means the comparative plots (position tracking errors, thrust, and torques) will be generated and displayed automatically as soon as the simulation successfully ends.
+*Note on Automation:* The `autoplot.m` script is explicitly configured within the `StopFcn` callback in the Model Properties of each Simulink file. This means the comparative plots (position tracking errors, thrust, and torques) will be generated and displayed automatically as soon as the simulation successfully ends.
