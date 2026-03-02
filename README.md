@@ -9,9 +9,7 @@ This repository contains the MATLAB/Simulink implementation of advanced nonlinea
 
 ## Key Features
 * **Modular Cascade Architecture:** The control system is explicitly divided into an Outer Loop (Translational Dynamics / Position) and an Inner Loop (Rotational Dynamics / Attitude) for all implemented controllers.
-* **Aerodynamic Disturbance Modeling:** Explicit MATLAB functions simulating nonlinear thrust variations near boundaries:
-  * *Ground Effect:* Modeled via the Cheeseman & Bennett formulation.
-  * *Ceiling Effect:* Modeled via parametric suction force equations.
+* **Aerodynamic Disturbance Modeling:** Explicit MATLAB functions simulating nonlinear thrust variations near boundaries. Both Ground and Ceiling effects have been mathematically modeled following the formulations and guidelines presented in the "Field and Service Robotics" course slides by Prof. Ruggiero.
 * **Comparative Control Analysis:** Implementation and direct comparison of four distinct control strategies.
 
 ## Implemented Control Strategies
