@@ -34,3 +34,16 @@ Below is the complete list of the files included in this repository and their sp
 * **`integral_backstepping.slx`**: Integral Backstepping (IBS) controller model, featuring integral error accumulation to dynamically handle the unmodeled mass and steady-state errors.
 * **`smc_controller.slx`**: Sliding Mode Controller (SMC) model utilizing the hyperbolic tangent (`tanh`) boundary layer in nominal conditions.
 * **`smc_ceilground.slx`**: SMC model evaluated in the severely perturbed scenario, demonstrating instantaneous robust switching against unmodeled dynamics.
+
+## Usage Instructions
+
+### 1. Prerequisites
+* **MATLAB & Simulink:** Recommended version R2023a or newer.
+* **Required Toolboxes:** Ensure you have the standard Simulink toolbox installed. No external hardware is required; the project is entirely simulation-based.
+
+### 2. Initialization (Setup)
+1) Run setup_mission.m to load the UAV parameters and trajectory data into the workspace.
+2) Open the desired .slx file based on the control strategy and scenario you want to test.
+3) Wait for the simulation to finish.
+
+Note on Automation: The autoplot.m script is explicitly configured within the StopFcn callback in the Model Properties of each Simulink file. This means the comparative plots (position tracking errors, attitude responses, thrust, and torques) will be generated and displayed automatically as soon as the simulation successfully ends.
