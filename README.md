@@ -19,7 +19,7 @@ This repository contains the MATLAB/Simulink implementation of advanced nonlinea
 4. **Sliding Mode Control (SMC):** A highly robust variable structure controller. Implemented as a *Quasi-Sliding Mode* utilizing a continuous boundary layer (`tanh`) to mitigate chattering while ensuring instantaneous disturbance rejection.
 
 ## Files Description
-Below is the complete list of the files included in this repository and their specific roles:
+Below is the complete list of the files and folders included in this repository and their specific roles:
 
 ### MATLAB Scripts (Initialization & Post-Processing)
 * **`setup_mission.m`**: The main initialization script. It loads the UAV's physical parameters (nominal mass, inertia matrix), tuning gains, aerodynamic coefficients, and generates the reference trajectories into the MATLAB workspace.
@@ -41,9 +41,11 @@ These helper functions are called by `autoplot.m` to export publication-quality 
 * **`latex_subplot_plot.m`**: Generates two stacked subplots.
 * **`latex_triple_subplot_plot.m`**: Generates three stacked subplots (e.g., for 3-axis control torques).
 * **`latex_dual_column_plot.m`**: Generates a 3x2 grid layout (e.g., reference vs. actual position on the left, tracking errors on the right).
+* **`latex_3d_tracking.m`**: Generates a combined figure featuring the 3D spatial trajectory alongside the separate axis errors.
 
-### 3D Assets
+### 3D Assets & Media
 * **`quadrotor.stl`**: A 3D CAD mesh file representing the UAV. It is imported by the `video.m` script to render the realistic 3D flight animation.
+* **`Videos/`**: A dedicated folder containing the rendered 3D flight animations for each control strategy and scenario. These are the exact simulation videos showcased in the final PowerPoint presentation.
 
 ## Usage Instructions
 
