@@ -41,7 +41,6 @@ These helper functions are called by `autoplot.m` to export publication-quality 
 * **`latex_subplot_plot.m`**: Generates two stacked subplots.
 * **`latex_triple_subplot_plot.m`**: Generates three stacked subplots (e.g., for 3-axis control torques).
 * **`latex_dual_column_plot.m`**: Generates a 3x2 grid layout (e.g., reference vs. actual position on the left, tracking errors on the right).
-* **`latex_3d_tracking.m`**: Generates a combined figure featuring the 3D spatial trajectory alongside the separate axis errors.
 
 ### 3D Assets & Media
 * **`quadrotor.stl`**: A 3D CAD mesh file representing the UAV. It is imported by the `video.m` script to render the realistic 3D flight animation.
