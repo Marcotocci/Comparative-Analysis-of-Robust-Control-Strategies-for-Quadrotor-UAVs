@@ -17,3 +17,20 @@ This repository contains the MATLAB/Simulink implementation of advanced nonlinea
 2. **Standard Vectorial Backstepping (BS):** A nonlinear Lyapunov-based controller utilizing nominal model parameters.
 3. **Integral Backstepping (IBS):** An augmented Backstepping approach incorporating integral action ($\int e_p dt$) to estimate and compensate for slowly varying uncertainties.
 4. **Sliding Mode Control (SMC):** A highly robust variable structure controller. Implemented as a *Quasi-Sliding Mode* utilizing a continuous boundary layer (`tanh`) to mitigate chattering while ensuring instantaneous disturbance rejection.
+
+## Files Description
+Below is the complete list of the files included in this repository and their specific roles:
+
+### MATLAB Scripts (Initialization & Post-Processing)
+* **`setup_mission.m`**: The main initialization script. It loads the UAV's physical parameters (nominal mass, inertia matrix), tuning gains, aerodynamic coefficients, and generates the reference trajectories into the MATLAB workspace.
+* **`autoplot.m`**: A post-processing script designed to automatically generate comparative plots for position errors, attitude tracking, and control efforts (thrust and torques) after a simulation ends.
+* **`video.m`**: Script utilized to generate and render the 3D flight animation of the quadrotor, visually demonstrating the tracking performance and the impact of the aerodynamic boundaries.
+
+### Simulink Models (Control Strategies)
+* **`geometric_control.slx`**: Baseline Geometric Controller model evaluated under nominal flight conditions.
+* **`geom_ceilground.slx`**: Geometric Controller evaluated under the perturbed scenario (+40% mass, Ground & Ceiling effects).
+* **`backstepping.slx`**: Standard Vectorial Backstepping controller model in nominal conditions.
+* **`backstepping_ceilground.slx`**: Standard Backstepping model tested against severe mass uncertainty and aerodynamic disturbances.
+* **`integral_backstepping.slx`**: Integral Backstepping (IBS) controller model, featuring integral error accumulation to dynamically handle the unmodeled mass and steady-state errors.
+* **`smc_controller.slx`**: Sliding Mode Controller (SMC) model utilizing the hyperbolic tangent (`tanh`) boundary layer in nominal conditions.
+* **`smc_ceilground.slx`**: SMC model evaluated in the severely perturbed scenario, demonstrating instantaneous robust switching against unmodeled dynamics.
