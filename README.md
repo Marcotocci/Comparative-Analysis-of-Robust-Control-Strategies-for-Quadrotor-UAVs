@@ -46,4 +46,4 @@ Below is the complete list of the files included in this repository and their sp
 2) Open the desired .slx file based on the control strategy and scenario you want to test.
 3) Wait for the simulation to finish.
 
-Note on Automation: The autoplot.m script is explicitly configured within the StopFcn callback in the Model Properties of each Simulink file. This means the comparative plots (position tracking errors, attitude responses, thrust, and torques) will be generated and displayed automatically as soon as the simulation successfully ends.
+Note on Automation: The autoplot.m script is explicitly configured within the StopFcn callback in the Model Properties of each Simulink file. This means the comparative plots (position tracking errors, thrust, and torques) will be generated and displayed automatically as soon as the simulation successfully ends.
