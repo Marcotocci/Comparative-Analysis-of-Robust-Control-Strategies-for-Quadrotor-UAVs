@@ -23,7 +23,7 @@ Below is the complete list of the files included in this repository and their sp
 
 ### MATLAB Scripts (Initialization & Post-Processing)
 * **`setup_mission.m`**: The main initialization script. It loads the UAV's physical parameters (nominal mass, inertia matrix), tuning gains, aerodynamic coefficients, and generates the reference trajectories into the MATLAB workspace.
-* **`autoplot.m`**: A post-processing script designed to automatically generate comparative plots for position errors, attitude tracking, and control efforts (thrust and torques) after a simulation ends.
+* **`autoplot.m`**: A post-processing script designed to automatically generate comparative plots for position errors and control efforts (thrust and torques) after a simulation ends.
 * **`video.m`**: Script utilized to generate and render the 3D flight animation of the quadrotor, visually demonstrating the tracking performance and the impact of the aerodynamic boundaries.
 
 ### Simulink Models (Control Strategies)
